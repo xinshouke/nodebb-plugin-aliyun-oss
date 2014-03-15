@@ -1,12 +1,12 @@
-# NodeBB Plugin Imgur
+# NodeBB Plugin Aliyun OSS
 
-A plugin that uploads images to Imgur.
+A plugin that uploads images to aliyun oss.
 
 ## Installation
 
-    npm install nodebb-plugin-imgur
+    npm install nodebb-plugin-aliyun-oss
 
 
-After installation create an Imgur App and put your Client ID in the control panel.
+After installation put your accessKeyId and sceretAccessKey in the control panel.
 
 

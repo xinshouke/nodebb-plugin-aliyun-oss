@@ -1,19 +1,20 @@
 {
-    "id": "nodebb-plugin-imgur",
-    "name": "Imgur Upload Plugin",
-    "description": "A Plugin that uploads images to imgur",
-    "url": "https://github.com/barisusakli/nodebb-plugin-imgur",
+    "id": "nodebb-plugin-aliyun-oss",
+    "name": "Aliyun OSS Upload Plugin",
+    "description": "A Plugin that uploads images to Aliyun OSS",
+    "url": "https://github.com/justmepzy/nodebb-plugin-aliyun-oss",
     "library": "./index.js",
     "staticDirs": {
-        "imgur": "public"
+        "aliyun-oss": "public"
     },
     "hooks": [
         { "hook": "action:app.load", "method": "init", "callbacked": true },
-
         { "hook": "filter:admin.header.build", "method": "admin.menu", "callbacked": false },
+        { "hook": "filter:admin.create_routes", "method": "admin.route", "callbacked": true },
         { "hook": "filter:uploadImage", "method": "upload", "callbacked": true, "priority": 6 }
 
     ],
     "minver": "0.4.0",
-    "templates": "./public/templates"
+    "templates": "./public/templates",
+    "repository": "https://github.com/justmepzy/nodebb-plugin-aliyun-oss"
 }
