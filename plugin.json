@@ -1,12 +1,13 @@
 {
-    "id": "nodebb-plugin-aliyun-oss",
-    "name": "Aliyun OSS Upload Plugin",
-    "description": "A Plugin that uploads images to Aliyun OSS",
-    "url": "https://github.com/justmepzy/nodebb-plugin-aliyun-oss",
+    "url": "https://github.com/xinshouke/nodebb-plugin-aliyun-oss",
     "library": "./index.js",
     "staticDirs": {
         "aliyun-oss": "public"
     },
+    "less": [
+        "assets/style.less"
+    ],
+    
     "hooks": [
         { "hook": "action:app.load", "method": "init", "callbacked": true },
         { "hook": "filter:admin.header.build", "method": "admin.menu", "callbacked": false },
@@ -14,7 +15,9 @@
         { "hook": "filter:uploadImage", "method": "upload", "callbacked": true, "priority": 6 }
 
     ],
-    "minver": "0.4.0",
-    "templates": "./public/templates",
-    "repository": "https://github.com/justmepzy/nodebb-plugin-aliyun-oss"
+    ],
+    "languages": "path/to/languages",
+    "nbbpm: {
+        { "compatibility": "^0.7.0" }
+    }
 }
